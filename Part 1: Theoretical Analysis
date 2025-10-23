@@ -1,0 +1,19 @@
+1. Short Answer Questions
+
+Q1: Explain how AI-driven code generation tools (e.g., GitHub Copilot) reduce development time. What are their limitations?
+Accuracy and edge cases: They often struggle with uncommon scenarios or edge cases not well-represented in training data, leading to incorrect or incomplete code that requires manual fixes.
+Security vulnerabilities: Generated code may introduce risks, such as improper input sanitization or other weaknesses, with studies showing a high likelihood of security issues in snippets.
+Dependency and skill erosion: Over-reliance can diminish developers' proficiency in core skills, as the tools may encourage less critical thinking about code structure.
+Intellectual property concerns: Outputs might infringe on copyrights or open-source licenses due to training on public code, raising legal risks.
+
+Q2: Compare supervised and unsupervised learning in the context of automated bug detection.
+Aspect,Supervised Learning,Unsupervised Learning
+Data Requirements,"Relies on labeled datasets where code snippets or instances are explicitly marked as ""buggy"" or ""non-buggy."" This requires human effort to create training data.","Uses unlabeled data, focusing on inherent patterns without predefined labels. No manual labeling is needed, making it easier to apply to large, raw datasets."
+How It Detects Bugs,"Trains models (e.g., classifiers like random forests or neural networks) to predict bugs based on known examples. Effective for identifying specific, recurring bug types like security vulnerabilities.","Detects anomalies or clusters similar code instances, flagging outliers as potential bugs. Useful for discovering novel or unknown defects through pattern recognition."
+Performance,"Generally outperforms unsupervised methods in accuracy for well-defined problems, especially with sufficient labeled data, but can be resource-intensive to train.","Effective at spotting changes in behavior or grouping instances, but may produce more false positives since it lacks explicit guidance."
+Use Cases,Common in tools for predicting known fault patterns in software testing or security bug reports.,"Ideal for exploratory analysis in large codebases or real-time monitoring where labels are unavailable, such as anomaly detection in network threats adapted to code."
+Limitations,Dependent on the quality and quantity of labels; poor labels lead to biased models. Not great for emerging bugs not in the training set.,Less precise for specific bug types and requires post-processing to interpret clusters or anomalies as actual bugs.
+Overall, supervised learning is more targeted and reliable for established bug patterns but demands more preparation, while unsupervised learning offers flexibility for uncovering hidden issues in dynamic environments.
+
+Q3: Why is bias mitigation critical when using AI for user experience personalization?
+Bias mitigation is essential in AI-driven user experience (UX) personalization because unchecked biases can distort recommendations, reinforce inequalities, and undermine the system's overall effectiveness and trustworthiness. Personalization algorithms, such as those in recommendation engines for e-commerce, streaming services, or social media, analyze user data to tailor content, but biases in training data or model design can lead to harmful outcomes
