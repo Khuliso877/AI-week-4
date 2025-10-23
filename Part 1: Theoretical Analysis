@@ -17,3 +17,15 @@ Overall, supervised learning is more targeted and reliable for established bug p
 
 Q3: Why is bias mitigation critical when using AI for user experience personalization?
 Bias mitigation is essential in AI-driven user experience (UX) personalization because unchecked biases can distort recommendations, reinforce inequalities, and undermine the system's overall effectiveness and trustworthiness. Personalization algorithms, such as those in recommendation engines for e-commerce, streaming services, or social media, analyze user data to tailor content, but biases in training data or model design can lead to harmful outcomes
+
+2. Case Study Analysis
+How AIOps Enhances Deployment Efficiency
+AIOps integrates machine learning and data analytics into DevOps workflows to streamline and optimize software delivery. Here’s how it boosts efficiency:
+1. Automated Anomaly Detection
+• 	AIOps tools continuously monitor deployment pipelines and system metrics.
+• 	They use machine learning models to detect unusual patterns—such as sudden spikes in CPU usage or failed builds—before these anomalies cause downtime.
+• 	Example: During a CI/CD pipeline run, AIOps can flag a memory leak in a new build by comparing it to historical performance data, allowing developers to fix it before release.
+2. Intelligent Incident Management
+• 	AIOps automates incident response by correlating logs, metrics, and alerts across distributed systems.
+• 	It prioritizes issues based on impact and suggests remediation steps, reducing manual triage time.
+• 	Example: If a deployment causes a service outage, AIOps can trace the root cause to a misconfigured container and trigger a rollback automatically, minimizing disruption.
