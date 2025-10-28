@@ -1,0 +1,43 @@
+Task 1
+
+from operator import itemgetter
+from typing import List, Dict, Any, Optional
+
+
+def sort_dicts_by_key_ai(dicts: List[Dict[str, Any]], key: str, reverse: bool = False, missing: Optional[Any] = None) -> List[Dict[str, Any]]:
+    """
+    AI-suggested: use Python's built-in sorted() with a key function.
+    This is concise and idiomatic.
+
+    - If all dictionaries are guaranteed to have `key`, you can use:
+        sorted(dicts, key=itemgetter(key), reverse=reverse)
+      which is slightly faster than a lambda.
+    - If keys may be missing, using .get(...) gives a safe default.
+    """
+    # safe version that handles missing keys
+    return sorted(dicts, key=lambda d: d.get(key, missing), reverse=reverse)
+
+
+if __name__ == "__main__":
+    sample = [
+        {"name": "alice", "age": 34},
+        {"name": "bob", "age": 23},
+        {"name": "carol"},  # missing age
+        {"name": "dan", "age": 29},
+    ]
+
+    print("AI-suggested sorted by age (missing -> None):")
+    print(sort_dicts_by_key_ai(sample, "age"))
+    print("AI-suggested sorted by age (missing -> large number):")
+    print(sort_dicts_by_key_ai(sample, "age", missing=10**9))
+
+##Manual impletation
+def sort_dicts_by_key_manual(data, key):
+    def get_sort_value(d):
+        return d[key] if key in d else None
+    return sorted(data, key=get_sort_value)
+
+Both implementations use Python’s built-in sorted() function, which is highly optimized and runs in O(n log n) time. The AI-suggested version is concise and leverages a lambda function with dict.get(), which safely returns None if the key is missing—avoiding KeyError. This makes it robust and readable.
+The manual version adds a named function for clarity and explicitly checks for key existence. While this improves transparency, it’s slightly more verbose and less elegant for simple use cases.
+In terms of performance, both are nearly identical. However, the AI-suggested version is more efficient in practice due to reduced overhead and cleaner syntax. It also aligns with Pythonic principles—favoring readability and brevity.
+✅ Verdict: The AI-suggested version is more efficient and elegant for general use, especially when handling optional keys.
