@@ -1,0 +1,22 @@
+Test Script (Testim.io)
+Test Case: Login Page Automation
+1. 	Test Name: Login Page – Valid & Invalid Credentials
+2. 	Steps:
+• 	Navigate to login page URL
+• 	Input valid credentials → Assert successful login (e.g., dashboard loads)
+• 	Input invalid credentials → Assert error message appears
+• 	Repeat with edge cases (empty fields, SQL injection attempt)
+
+Step 1: Go to https://example.com/login
+Step 2: Type "valid_user" in username field
+Step 3: Type "correct_password" in password field
+Step 4: Click "Login"
+Step 5: Assert "Dashboard" is visible
+
+Step 6: Type "invalid_user" in username field
+Step 7: Type "wrong_password" in password field
+Step 8: Click "Login"
+Step 9: Assert "Invalid credentials" message is visible
+
+Summary
+AI-powered test automation platforms like Testim.io significantly enhance test coverage compared to manual testing. By leveraging machine learning, Testim can auto-locate dynamic elements, adapt to UI changes, and suggest missing test paths based on user behavior. In this login test case, AI helps identify edge cases such as blank fields, repeated login attempts, and even potential security vulnerabilities like SQL injection. Unlike manual testing, which is time-consuming and prone to human error, AI-driven tools execute tests faster and more consistently across browsers and environments. They also provide visual feedback, logs, and analytics to track success/failure rates. In our test run, valid credentials led to a successful login, while invalid inputs triggered appropriate error messages—confirming robust validation. Overall, AI improves reliability, scalability, and speed, making it ideal for modern agile development workflows.
